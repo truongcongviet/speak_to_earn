@@ -3,6 +3,9 @@ export type TranscriptionResponse = {
 }
 
 export type APITranscriptionResponse = {
+  text: any
   success: boolean
-  data: string
+  data: {
+    text: string
+  }
 }

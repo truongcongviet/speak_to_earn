@@ -1,6 +1,6 @@
 import axios from "axios"
 import { APITranscriptionResponse } from "../types/TranscriptionResponse"
-import { API_ROUTES } from "../constants"
+// import { API_ROUTES } from "../constants"
 
 const API_ENDPOINT = "https://api.lemonfox.ai/v1/audio/transcriptions"
 export const handleGetVoiceData = async (audioBlob: Blob) => {
@@ -22,7 +22,7 @@ export const handleGetVoiceData = async (audioBlob: Blob) => {
     )
     console.log("🚀 ~ downloadAudio ~ data:", data)
 
-    return data?.text
+    return data.text
   } catch (error) {
     console.log("🚀 ~ downloadAudio ~ error:", error)
   }

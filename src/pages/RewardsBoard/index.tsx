@@ -1,8 +1,6 @@
-import { ethers } from "ethers"
 import { useWalletClient } from "wagmi"
 import web3 from "web3"
 import {
-  contractAddress,
   TokenManagement,
 } from "../../services/tokenManagement"
 
@@ -33,7 +31,7 @@ const RewardsBoard = () => {
   const claimToken = async () => {
     try {
       if (!data?.account.address) return
-      const address = data?.account.address
+      // const address = data?.account.address
       const amount = web3.utils.toWei(1, 18)
       const service = new TokenManagement()
       // const messageHash = ethers.utils.keccak256(

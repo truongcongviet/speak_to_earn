@@ -1,5 +1,5 @@
 import { ITabType } from "../../providers/NavigationProvider";
-import { CustomerServiceOutlined, ProfileOutlined } from "@ant-design/icons";
+import { CustomerServiceOutlined } from "@ant-design/icons";
 import { useNavigationContext } from "../../hooks/useNavigationContext";
 import clsx from "clsx";
 
