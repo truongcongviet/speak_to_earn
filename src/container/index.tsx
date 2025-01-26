@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import Navigation from "./Navigation";
 const Container = ({ children }: PropsWithChildren) => {
   return (
-    <div className="flex flex-col items-center rounded-md p-2 pb-0 border border-gray-300 bg-background-learn bg-no-repeat bg-cover w-full h-screen">
+    <div className="container flex flex-col items-center rounded-md pb-0 w-full h-screen pt-48">
       <div className="py-5 text-center">
       <p className="text-5xl mb-5">SPEAK TO EARN</p>
 

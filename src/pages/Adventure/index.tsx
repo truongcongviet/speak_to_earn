@@ -10,7 +10,7 @@ const Adventure = () => {
         <div className="flex flex-none" style={{ margin: "16px auto" }}>
           {<ConnectButton />}
         </div>
-        <div className="flex max-h-40">
+        <div className="flex max-h-40 mx-20">
           <Paragraph />
         </div>
         <div className="flex flex-1 mt-4">

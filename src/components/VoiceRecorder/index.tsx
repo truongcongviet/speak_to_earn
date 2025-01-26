@@ -24,7 +24,7 @@ const VoiceRecorder = () => {
           <AudioOutlined className="text-4xl" />
         )}
       </div>
-      <button onClick={reset}>Reset</button>
+      <button className="cursor-pointer rounded-xl bg-purple-300 px-4" onClick={reset}>Reset</button>
     </div>
   )
 }

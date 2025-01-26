@@ -11,7 +11,7 @@ export default {
         blue: "#0000FF",
       },
       backgroundImage: {
-        'background-learn': "url('./src/assets/languages.png')",
+        'background-learn': "url('./src/assets/bg-tet3.jpg')",
       }
     },
   },
