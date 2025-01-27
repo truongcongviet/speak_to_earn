@@ -1,7 +1,7 @@
 import Container from "../../container";
 import VoiceRecorder from "../../components/VoiceRecorder";
 import Paragraph from "../../components/Paragraph";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useVoice } from "../../providers/VoiceProvider";
 import { cosineSimilarity, getScoreMessage } from "../../utils/matchedFunc";
 

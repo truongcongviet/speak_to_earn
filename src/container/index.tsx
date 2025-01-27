@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 const Container = ({ children }: PropsWithChildren) => {
   return (
     <div className="container flex flex-col items-center rounded-md pb-0 w-full h-screen pt-40 lg:pt-48">
