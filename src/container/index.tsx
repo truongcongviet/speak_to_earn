@@ -1,6 +1,14 @@
 import { PropsWithChildren } from "react";
+import Confetti from "../components/FireWork";
 // import Navigation from "./Navigation";
 const Container = ({ children }: PropsWithChildren) => {
+  // const [showCelebration, setShowCelebration] = useState(false);
+
+  // const handleClick = () => {
+  //   setShowCelebration(true);
+  //   // Automatically hide celebration after duration
+  //   setTimeout(() => setShowCelebration(false), 3000);
+  // };
   return (
     <div className="container flex flex-col items-center rounded-md pb-0 w-full h-screen pt-40 lg:pt-48">
       <div className="py-5 text-center">
@@ -23,6 +31,16 @@ const Container = ({ children }: PropsWithChildren) => {
       {/* <div className="w-full flex-none">
         <Navigation />
       </div> */}
+      {<Confetti />}
+
+      {/* {showCelebration && (
+        <Celebrate
+          isActive={true}
+          duration={3000}
+          particleCount={100}
+          colors={['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff']}
+        />
+      )} */}
     </div>
   );
 };
