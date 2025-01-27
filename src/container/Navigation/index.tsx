@@ -1,11 +1,11 @@
 import { ITabType } from "../../providers/NavigationProvider";
-import { CustomerServiceOutlined } from "@ant-design/icons";
+import { ReadOutlined } from "@ant-design/icons";
 import { useNavigationContext } from "../../hooks/useNavigationContext";
 import clsx from "clsx";
 
 const NavigationTab = [
   {
-    component: CustomerServiceOutlined,
+    component: ReadOutlined,
     key: "adventure",
   },
   // {
@@ -29,11 +29,10 @@ const Navigation = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-between mt-5">
+    <div className="w-full flex items-center justify-between">
       {NavigationTab.map((item) => {
         const { key, component: Component } = item;
         const isActive = currentTab === key;
-        console.log('isActive', {isActive, currentTab})
         return (
           <div
             className="flex-1 cursor-pointer flex flex-col items-center justify-center"

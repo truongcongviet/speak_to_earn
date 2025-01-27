@@ -36,6 +36,18 @@ export function cosineSimilarity(text1: string, text2: string) {
   return (dotProd / (mag1 * mag2) * 100).toFixed(2)
 }
 
+export const getScoreMessage = (score: number): string => {
+  if (score < 30) {
+    return "Keep going! You can do better 🌱";
+  } else if (score < 60) {
+    return "You're doing well! Just need a little more practice 💪";
+  } else if (score < 90) {
+    return "Amazing progress! You're so close to perfection ⭐";
+  } else {
+    return "Absolutely fantastic! You're a superstar! 🌟";
+  }
+ }
+
 // Example usage
 const paragraph1 = "This is a sample paragraph for comparison."
 const paragraph2 = "This paragraph is a sample for comparing text."
