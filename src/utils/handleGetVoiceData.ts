@@ -2,8 +2,10 @@ import axios from "axios"
 import { APITranscriptionResponse } from "../types/TranscriptionResponse"
 // import { API_ROUTES } from "../constants"
 
+
 const API_ENDPOINT = "https://api.lemonfox.ai/v1/audio/transcriptions"
 export const handleGetVoiceData = async (audioBlob: Blob) => {
+  console.log({ data :import.meta.env.VITE_BEAR_KEY_AI})
   try {
     const formData = new FormData()
     formData.append("file", audioBlob)
@@ -16,7 +18,7 @@ export const handleGetVoiceData = async (audioBlob: Blob) => {
       {
         headers: {
           "Access-Control-Allow-Origin": "*",
-          'Authorization': 'Bearer RQSC6vwMDABtQKswLCqCybgdjFLibz7V'
+          'Authorization': `Bearer ${import.meta.env.VITE_BEAR_KEY_AI}`
         },
       }
     )
