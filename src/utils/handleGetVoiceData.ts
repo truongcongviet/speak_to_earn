@@ -17,7 +17,7 @@ export const handleGetVoiceData = async (audioBlob: Blob) => {
       {
         headers: {
           "Access-Control-Allow-Origin": "*",
-          'Authorization': `Bearer ${import.meta.env.VITE_BEAR_KEY_AI}`
+          'Authorization': `Bearer RQSC6vwMDABtQKswLCqCybgdjFLibz7V`
         },
       }
     )
