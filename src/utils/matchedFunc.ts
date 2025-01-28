@@ -36,6 +36,33 @@ export function cosineSimilarity(text1: string, text2: string) {
   return (dotProd / (mag1 * mag2) * 100).toFixed(2)
 }
 
+export const calculateSimilarity = (finalTranscript: string, script: string) => {
+  const cleanText = (text: string) => {
+    return text.toLowerCase().replace(/[.,!?]/g, '').trim();
+  };
+
+  const cleanFinalTranscript = cleanText(finalTranscript);
+  const cleanScript = cleanText(script);
+
+  const finalWords = cleanFinalTranscript.split(/\s+/);
+  const scriptWords = cleanScript.split(/\s+/);
+
+  let matchCount = 0;
+  finalWords.forEach(word => {
+    if (scriptWords.includes(word)) {
+      matchCount++;
+    }
+  });
+
+  const similarity = (matchCount / scriptWords.length) * 100;
+
+  return {
+    percentage: similarity.toFixed(2),
+    matchedWords: matchCount,
+    totalWords: scriptWords.length
+  };
+};
+
 export const getScoreMessage = (score: number): string => {
   if (score < 30) {
     return "Keep going! You can do better 🌱";
@@ -52,8 +79,8 @@ export const getScoreMessage = (score: number): string => {
 const paragraph1 = "This is a sample paragraph for comparison."
 const paragraph2 = "This paragraph is a sample for comparing text."
 
-const similarity = cosineSimilarity(paragraph1, paragraph2)
-console.log(`Cosine Similarity: ${similarity}`)
+const similarity = calculateSimilarity(paragraph2, paragraph1)
+console.log(`Cosine Similarity: ${similarity.percentage}`)
 
 export function compareParagraphs(paragraph1: string, paragraph2: string) {
   // Tokenize and normalize the paragraphs

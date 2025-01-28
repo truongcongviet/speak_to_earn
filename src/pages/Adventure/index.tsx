@@ -3,14 +3,14 @@ import VoiceRecorder from "../../components/VoiceRecorder";
 import Paragraph from "../../components/Paragraph";
 // import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useVoice } from "../../providers/VoiceProvider";
-import { cosineSimilarity, getScoreMessage } from "../../utils/matchedFunc";
+import { calculateSimilarity, getScoreMessage } from "../../utils/matchedFunc";
 import Celebrate from "../../components/Celebrate";
 
 const Adventure = () => {
   const { script, finalTranscript } = useVoice()
-  const numberPercent = Number(cosineSimilarity(script, finalTranscript))
+  const { percentage } = calculateSimilarity(finalTranscript, script)
   
-  const messageAdvice = getScoreMessage(numberPercent)
+  const messageAdvice = getScoreMessage(Number(percentage))
   return (
     <Container>
       <div className="flex flex-col items-center">
