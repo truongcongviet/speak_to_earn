@@ -5,7 +5,6 @@ import { APITranscriptionResponse } from "../types/TranscriptionResponse"
 
 const API_ENDPOINT = "https://api.lemonfox.ai/v1/audio/transcriptions"
 export const handleGetVoiceData = async (audioBlob: Blob) => {
-  console.log({ data :import.meta.env.VITE_BEAR_KEY_AI})
   try {
     const formData = new FormData()
     formData.append("file", audioBlob)
